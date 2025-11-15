@@ -1,0 +1,16 @@
+
+# Ask user to input their weight and whether its in kg or pounds
+weight = int(input('enter your weight?: '))
+Symbol =input('kg or pound: ')
+
+# Create a function that will convert the input weight
+# to opp unit based on Symbol specification 
+
+def Converter(weight):
+    if Symbol == "kg":
+        print (f'your weight is: {round(weight*2.2)} lbs') #round to let the code round off
+    else: 
+        print (f'your weight is: {round(weight/2.2)} kg') 
+
+# call the funtion   
+Converter(weight)
