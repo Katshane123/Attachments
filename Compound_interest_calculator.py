@@ -1,6 +1,6 @@
 # Python compound interest calculator 
 # compound interest formula 
-# name variables youl'll need, its P, i and t
+# name variables you'll need, its P, i and t
 
 Principle = 0 
 rate = 0 
@@ -35,3 +35,4 @@ print(f'Your compounded amount will be: R{Total:.2f}' )
 
 
       
+
