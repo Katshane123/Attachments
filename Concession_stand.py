@@ -1,12 +1,32 @@
+#Author : CyberKAT
+#Starbucks Concession stand
+name= input('Hello, what is your name\n')
+Total = 0
 
-Numbers = [1 , 5 , 8 , 10, 60, 34 ,34, 32, 21 , 90, 65, 74, 56, 44, 99, 63,]
-Uniques = []
+print(f"Hello, {name} ,What would you like to order")
+print("")
+print('Here is our menu ')
 
-for number in Numbers: 
-    if number not in Uniques : 
-        Uniques.append(number)
+Menu = {
+    'black coffee':40, 
+    'latte':50, 
+    'white coffe':35, 
+    'cappucino':40}
+ 
+while True:
+    print('---------MENU-------')
+    for item,price in Menu.items():
+       print(f"{item}: R{price}")
+    
+    Order = input('\nEnter your order (q to Quit): ').strip().title().lower()
+    if Order == "q":
+        break 
+    if Order in Menu:
+        Total += Menu[Order]
+        print(f'{Order} added! Current total: {Total}')
+    else :
+        print("That item is not on the menu.")
 
-print(Uniques)
-
+print(f'\nFinal Total: R{Total}')
 
 
