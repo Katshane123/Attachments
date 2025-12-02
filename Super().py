@@ -1,0 +1,28 @@
+# Super() the super Function , super().__init(parameters). Use it to reuse constructor of Parent class
+class Shape:
+    def __init__(self, color ,is_filled):
+        self.color = color 
+        self.is_filled = is_filled
+
+class Circle(Shape):
+    def __init__(self , color , is_filled , radius):
+        super().__init__(color , is_filled)
+        self.radius = radius 
+
+class Square(Shape):
+     def __init__(self , color , is_filled , width):
+        super().__init__(color , is_filled)
+        self.width =  width
+
+class Triangle(Shape): 
+     def __init__(self , color , is_filled , width ,height):
+        super().__init__(color , is_filled)
+        self.width = width
+        self.height = height
+
+
+circle = Circle(color= "Red" , is_filled =True , radius = 5)
+square = Square("Blue" , True , 10 )
+triangle = Triangle("Green" , False , 8 , 10)
+
+print(f"The tiangle has a width of {triangle.width} and height of {triangle.height}")
